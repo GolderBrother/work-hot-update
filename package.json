@@ -29,7 +29,9 @@
     "npm": ">= 3.10.8"
   },
   "scripts": {
-    "dev": "supervisor ./bin/www",
+    "dev": "pm2 start ./bin/www",
+    "stop": "pm2 stop ./bin/www",
+    "log": "pm2 logs",
     "start": "node ./bin/www",
     "init": "node ./bin/db init",
     "upgrade": "node ./bin/db upgrade",

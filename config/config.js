@@ -59,8 +59,7 @@ config.development = {
     // Binary files storage dir, Do not use tmpdir and it's public download dir.
     storageDir: process.env.STORAGE_DIR || "/home/ubuntu/codepush/storage",
     // Binary files download host address which Code Push Server listen to. the files storage in storageDir.
-    downloadUrl:
-      process.env.LOCAL_DOWNLOAD_URL || "http://188.131.160.136:3000",
+    downloadUrl: process.env.LOCAL_DOWNLOAD_URL || "http://188.131.160.136:3000",
     // public static download spacename.
     public: "",
   },
@@ -83,7 +82,7 @@ config.development = {
     // create patch updates's number. default value is 3
     diffNums: 3,
     // data dir for caclulate diff files. it's optimization.
-    dataDir: "/home/ubuntu/codepush/data",
+    dataDir: '/home/ubuntu/codepush/data',
     // storageType which is your binary package files store. options value is ("local" | "qiniu" | "s3"| "oss" || "tencentcloud")
     storageType: process.env.STORAGE_TYPE || "local",
     // options value is (true | false), when it's true, it will cache updateCheck results in redis.

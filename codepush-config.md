@@ -22,13 +22,13 @@ admin
 
 下面的命令参数已经跟原生约定好
 
+然后输入到命令行终端中，执行完毕会生成两个 `key`, 发给原生开发人员
+
 ### 2. 创建应用
 
 ```bash
 code-push app add CodePushAndroid android react-native
 ```
-
-执行完毕会生成两个 `key`, 发给原生开发人员
 
 ### 3. 更新应用
 

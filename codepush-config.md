@@ -9,7 +9,15 @@
 ### 1. 登录`Code Push`服务器
 
 ```bash
-code-push login http://localhost:3000
+# code-push login http://localhost:3000
+code-push login http://172.16.6.190:3000
+```
+
+```
+账号：
+admin
+密码：
+123456
 ```
 
 下面的命令参数已经跟原生约定好
@@ -27,19 +35,19 @@ code-push app add CodePushAndroid android react-native
 `react-native` 项目下执行，`test` 用来匹配是否检查安装应用
 
 ```bash
-code-push release-react CodePushAndroid android --d Production --t 0.1.0 --des [test]测试环境更新 1 --m true
+code-push release-react CodePushAndroid android --d Production --t 0.1.0 --des [test]测试环境更新1 --m true
 ```
 
 ```bash
-code-push release-react CodePushAndroid android --d Staging --t 0.1.0 --des [test]测试环境更新 1 --m true
+code-push release-react CodePushAndroid android --d Staging --t 0.1.0 --des [test]测试环境更新1 --m true 
 ```
 
 ```bash
-code-push release-react CodePushIos ios --d Production --t 0.1.0 --des [test]测试环境更新 1 --m true
+code-push release-react CodePushIos ios --d Production --t 0.1.0 --des [test]测试环境更新1 --m true
 ```
 
 ```bash
-code-push release-react CodePushIos ios --d Staging --t 0.1.0 --des [test]测试环境更新 1 --m true
+code-push release-react CodePushIos ios --d Staging --t 0.1.0 --des [test]测试环境更新1 --m true
 ```
 
 ### 4. 获取应用的 `Key`

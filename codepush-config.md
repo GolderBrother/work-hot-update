@@ -62,6 +62,8 @@ code-push logout
 
 #### Anaroid 应用
 
+#### Anaroid 应用
+
 ```bash
 code-push app add CodePushAndroid android react-native
 ```
@@ -100,6 +102,7 @@ code-push release-react CodePushIos ios --d Staging --t 0.1.0 --des [test]测试
 -   `t`: 版本号，只支持 3 位数，跟原生应用约定好一致
 -   `des`: 版本描述：其中的`test`表示发给设定了版本表示为`test`的安装包
 
+<<<<<<< HEAD
 #### 静默更新应用(不弹窗，后台下载)
 
 比如在`iOS`平台，执行以下命令：
@@ -120,6 +123,9 @@ code-push release-react CodePushIos ios --d Production --t 1.2.1 --des [test]{Si
 其中, 在`des`中添加`{SilentUpdate}`表示走静默更新，这边是完全匹配，如果匹配的话就在后台自动下载更新，不会再弹框提示
 
 ### 5. 获取应用的 `Key`
+=======
+### 4. 获取应用的 `Key`
+>>>>>>> 5fcc207d4023f3221f4b42b983c34d17b8d32e4a
 
 ```bash
 code-push deployment ls CodePushAndroid -k

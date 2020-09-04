@@ -6,7 +6,39 @@
 
 [最新 React Native 搭建本地 Code Push 服务(非常全！)](https://www.wddsss.com/main/displayArticle/224)
 
-### 1. 登录`Code Push`服务器
+### 1. 首先全局安装微软提供的 code-push-cli 工具
+
+```bash
+npm install code-push-cli@latest -g
+```
+
+#### 常用`code-push`命令
+
+-   注册账号: code-push register
+
+-   登陆: code-push login
+
+-   注销: code-push logout
+
+-   添加项目: code-push app add app 名称
+
+-   删除项目: code-push app remove app 名称
+
+-   列出账号下的所有项目: code-push app list
+
+-   显示登陆的 token: code-push access-key ls
+
+-   部署一个环境: code-push deployment add appName deploymentName
+
+-   删除部署: code-push deployment rm appName
+
+-   列出应用的部署: code-push deployment ls appName
+
+-   查询部署环境的 key: code-push deployment ls appName -k
+
+我们会在后面使用此工具创建，发布，更新 App
+
+### 2. 登录`Code Push`服务器
 
 ```bash
 # code-push login http://localhost:3000
@@ -26,7 +58,7 @@ admin
 code-push logout
 ```
 
-### 2. 创建应用
+### 3. 创建应用
 
 #### Anaroid 应用
 
@@ -42,7 +74,7 @@ code-push app add CodePushIos iOS react-native
 
 然后输入到命令行终端中，执行完毕会生成两个 `key`, 发给原生开发人员
 
-### 3. 更新应用
+### 4. 更新应用
 
 `react-native` 项目下执行，`test` 用来匹配是否检查安装应用
 
@@ -87,7 +119,7 @@ code-push release-react CodePushIos ios --d Production --t 1.2.1 --des [test]{Si
 
 其中, 在`des`中添加`{SilentUpdate}`表示走静默更新，这边是完全匹配，如果匹配的话就在后台自动下载更新，不会再弹框提示
 
-### 4. 获取应用的 `Key`
+### 5. 获取应用的 `Key`
 
 ```bash
 code-push deployment ls CodePushAndroid -k
@@ -97,7 +129,7 @@ code-push deployment ls CodePushAndroid -k
 code-push deployment ls CodePushIos -k
 ```
 
-### 5. 清除推送的更新(终止)
+### 6. 清除推送的更新(终止)
 
 ```bash
 code-push deployment clear CodePushAndroid staging

@@ -26,8 +26,16 @@ admin
 
 ### 2. 创建应用
 
+#### Anaroid 应用
+
 ```bash
 code-push app add CodePushAndroid android react-native
+```
+
+#### iOS 应用
+
+```bash
+code-push app add CodePushIos iOS react-native
 ```
 
 ### 3. 更新应用
@@ -35,20 +43,26 @@ code-push app add CodePushAndroid android react-native
 `react-native` 项目下执行，`test` 用来匹配是否检查安装应用
 
 ```bash
-code-push release-react CodePushAndroid android --d Production --t 0.1.0 --des [test]测试环境更新1 --m true
+code-push release-react CodePushAndroid android --d Production --t 0.1.0 --des [test]生产环境更新1 --m true
 ```
 
 ```bash
-code-push release-react CodePushAndroid android --d Staging --t 0.1.0 --des [test]测试环境更新1 --m true 
+code-push release-react CodePushAndroid android --d Staging --t 0.1.0 --des [test]测试环境更新1 --m true
 ```
 
 ```bash
-code-push release-react CodePushIos ios --d Production --t 0.1.0 --des [test]测试环境更新1 --m true
+code-push release-react CodePushIos ios --d Production --t 0.1.0 --des [test]生产环境更新1 --m true
 ```
 
 ```bash
 code-push release-react CodePushIos ios --d Staging --t 0.1.0 --des [test]测试环境更新1 --m true
 ```
+
+参数说明：
+
+-   `d`: 发布的环境，`Staging`表示开发环境，`Production`表示生产环境
+-   `t`: 版本号，只支持 3 位数，跟原生应用约定好一致
+-   `des`: 版本描述：其中的`test`表示发给设定了版本表示为`test`的安装包
 
 ### 4. 获取应用的 `Key`
 

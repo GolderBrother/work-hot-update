@@ -60,15 +60,13 @@ code-push logout
 
 ### 3. 创建应用
 
-#### Anaroid 应用
-
-#### Anaroid 应用
+#### `Android` 应用
 
 ```bash
 code-push app add CodePushAndroid android react-native
 ```
 
-#### iOS 应用
+#### `iOS` 应用
 
 ```bash
 code-push app add CodePushIos iOS react-native
@@ -122,9 +120,6 @@ code-push release-react CodePushIos ios --d Production --t 1.2.1 --des [test]{Si
 其中, 在`des`中添加`{SilentUpdate}`表示走静默更新，这边是完全匹配，如果匹配的话就在后台自动下载更新，不会再弹框提示
 
 ### 5. 获取应用的 `Key`
-=======
-### 4. 获取应用的 `Key`
->>>>>>> 5fcc207d4023f3221f4b42b983c34d17b8d32e4a
 
 ```bash
 code-push deployment ls CodePushAndroid -k

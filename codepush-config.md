@@ -102,7 +102,6 @@ code-push release-react CodePushIos ios --d Staging --t 0.1.0 --des [test]测试
 -   `t`: 版本号，只支持 3 位数，跟原生应用约定好一致
 -   `des`: 版本描述：其中的`test`表示发给设定了版本表示为`test`的安装包
 
-<<<<<<< HEAD
 #### 静默更新应用(不弹窗，后台下载)
 
 比如在`iOS`平台，执行以下命令：
